@@ -2,6 +2,7 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
 from typing import List
+from project.tools.run_terminal import RunTerminalTool
 
 @CrewBase
 class Project():
@@ -32,6 +33,13 @@ class Project():
             config=self.agents_config['frontend_engineer'], #type: ignore[index]
         )
 
+    @agent
+    def service_runner(self) -> Agent:
+        return Agent(
+            config=self.agents_config['service_runner'], # type: ignore[index]
+            tools=[RunTerminalTool()],
+        )
+
     @task
     def design_task(self) -> Task:
         return Task(
@@ -48,6 +56,12 @@ class Project():
     def frontend_task(self) -> Task:
         return Task(
             config=self.tasks_config['frontend_task'], # type: ignore[index]
+        )
+
+    @task
+    def run_service_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['run_service_task'], # type: ignore[index]
         )
 
     @crew

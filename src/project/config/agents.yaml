@@ -36,3 +36,13 @@ frontend_engineer:
     You're a seasoned python engineer highly skilled at writing simple Gradio UIs for a backend class.
     You produce a simple gradio UI that demonstrates the given backend class; you write the gradio UI in a module app.py that is in the same directory as the backend module {module_name}.
   llm: gpt-4o
+
+service_runner:
+  role: >
+    A service runner for run a gradio file
+  goal: >
+    Run the {module name} with use RunTerminalTool and return a message for following this url: http://127.0.0.1:7860/
+  backstory: >
+    You're a seasoned service runner highly skilled at run a gradio project with terminal.
+  llm:
+    gpt-4o-mini

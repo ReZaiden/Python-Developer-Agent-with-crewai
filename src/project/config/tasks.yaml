@@ -36,3 +36,13 @@ frontend_task:
   context:
     - code_task
   output_file: output/{module_name}/app.py
+
+run_service_task:
+  description: >
+    Use the RunTerminalTool to run the {module_name} project.
+    You must send this argument to RunTerminalTool: output/{module_name}/app.py
+    you must send a good message to follow the link for view the output of the project: http://127.0.0.1:7860/
+  expected_output: >
+    you must send a good message to follow the link for view the output of the project: http://127.0.0.1:7860/
+  agent: service_runner
+  output_file: output/{module_name}/finally.md
