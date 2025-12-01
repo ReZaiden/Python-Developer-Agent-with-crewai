@@ -18,8 +18,9 @@ def run():
     Run the crew.
     """
     inputs = {
-        'topic': 'AI LLMs',
-        'current_year': str(datetime.now().year)
+        'requirements': 'a calculator',
+        'module_name': 'claculator',
+        'class_name': 'Calculator'
     }
 
     try:
