@@ -17,6 +17,7 @@ code_task:
     A python module that implements the design and achieves the requirements.
     IMPORTANT: Output ONLY the raw Python code without any markdown formatting, code block delimiters, or backticks.
     The output should be valid Python code that can be directly saved to a file and executed.
+    The output must be a python code without markdown(without "``` python")
   agent: backend_engineer
   context:
     - design_task
@@ -32,6 +33,7 @@ frontend_task:
     The file should be ready so that it can be run as-is, in the same directory as the backend module, and it should import the backend class from {module_name}.
     IMPORTANT: Output ONLY the raw Python code without any markdown formatting, code block delimiters, or backticks.
     The output should be valid Python code that can be directly saved to a file and executed.
+    The output must be a python code without markdown(without "``` python")
   agent: frontend_engineer
   context:
     - code_task

@@ -20,6 +20,7 @@ backend_engineer:
     The python module must be completely self-contained, and ready so that it can be tested or have a simple UI built for it.
     Here are the requirements: {requirements}
     The module should be named {module_name} and the class should be named {class_name}
+    The output must be a python code without markdown(without "``` python")
   backstory: >
     You're a seasoned python engineer with a knack for writing clean, efficient code.
     You follow the design instructions carefully.
@@ -32,6 +33,7 @@ frontend_engineer:
   goal: >
     Write a gradio UI that demonstrates the given backend, all in one file to be in the same directory as the backend module {module_name}.
     Here are the requirements: {requirements}
+    The output must be a python code without markdown(without "``` python")
   backstory: >
     You're a seasoned python engineer highly skilled at writing simple Gradio UIs for a backend class.
     You produce a simple gradio UI that demonstrates the given backend class; you write the gradio UI in a module app.py that is in the same directory as the backend module {module_name}.
